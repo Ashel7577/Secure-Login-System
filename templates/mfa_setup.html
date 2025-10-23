@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Setup Multi-Factor Authentication</h2>
+<p>Scan the QR code with your authenticator app (Google Authenticator, Authy, etc.):</p>
+
+<img src="{{ url_for('qr_code') }}" alt="QR Code">
+
+<p>Or enter this secret manually: <strong>{{ totp_secret }}</strong></p>
+
+<form method="POST" action="{{ url_for('confirm_mfa') }}">
+    <div class="form-group">
+        <label for="totp_code">Enter 6-digit code from authenticator app:</label>
+        <input type="text" id="totp_code" name="totp_code" maxlength="6" required>
+    </div>
+    
+    <button type="submit">Confirm and Enable MFA</button>
+</form>
+
+<a href="{{ url_for('dashboard') }}">Cancel</a>
+{% endblock %}

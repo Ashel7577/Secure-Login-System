@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Welcome, {{ user.username }}!</h2>
+<p>Email: {{ user.email }}</p>
+
+{% if user.totp_secret %}
+    <p>✅ Multi-factor authentication is enabled</p>
+{% else %}
+    <p>❌ Multi-factor authentication is not enabled</p>
+    <p><a href="{{ url_for('setup_mfa') }}">Enable MFA</a></p>
+{% endif %}
+
+<a href="{{ url_for('logout') }}">Logout</a>
+{% endblock %}
