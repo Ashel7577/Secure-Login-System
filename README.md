@@ -29,19 +29,3 @@ A secure authentication system demonstrating modern cybersecurity practices incl
 - Proper logout functionality
 - Session validation on each request
 
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/yourusername/secure-login-system.git
-cd secure-login-system
-
-# Create and activate virtual environment
-python3 -m venv venv
-source venv/bin/activate
-
-# Install dependencies
-pip install Flask bcrypt pyotp qrcode Pillow
-
-# Run the application
-python app.py
