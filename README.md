@@ -2,7 +2,7 @@
 
 A secure authentication system demonstrating modern cybersecurity practices including password security, account lockout mechanisms, and multi-factor authentication.
 
-![Secure Login System Screenshot](screen_shots/)
+![Secure Login System Screenshot](screen_shots/Screenshot2025-10-24at20.23.08.png)
 
 ## Features
 
